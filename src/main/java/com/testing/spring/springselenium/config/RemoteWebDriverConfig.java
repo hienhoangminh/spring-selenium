@@ -37,9 +37,4 @@ public class RemoteWebDriverConfig {
         return new RemoteWebDriver(this.url, DesiredCapabilities.chrome());
     }
 
-    @Bean
-    public WebDriverWait webDriverWait(WebDriver driver) {
-        return new WebDriverWait(driver, this.timeout);
-    }
-
 }

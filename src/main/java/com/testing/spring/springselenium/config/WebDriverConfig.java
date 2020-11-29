@@ -15,9 +15,7 @@ import org.springframework.context.annotation.*;
 public class WebDriverConfig {
 
     @Bean
-//    @Primary
     @ConditionalOnMissingBean
-//    @ConditionalOnProperty(name = "browser", havingValue = "chrome")
     public WebDriver chromeDriver() {
         WebDriverManager.chromedriver().setup();
         return new ChromeDriver();
